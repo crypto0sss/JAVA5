@@ -1,5 +1,3 @@
-package FoodLib;
-
 import java.util.Map;
 
 public class Fruit extends Food {
