@@ -1,10 +1,15 @@
 
+import food.*;
+import repo.FoodRepository;
+import repo.InMemoryFoodRepositoryImp;
+
+
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        FoodRepository foodRepository = new InMemoryFoodRepository();
+        FoodRepository foodRepository = new InMemoryFoodRepositoryImp();
 
         // Добавляем еду в репозиторий
         addFoodToRepository(foodRepository);
@@ -77,7 +82,7 @@ public class Main {
         repository.addFood(new Vegetable("Картофель", true, potatoNutritionalValue));
     }
 
-    private static void displayAllFoods(FoodRepository repository) {
+    public static void displayAllFoods(FoodRepository repository) {
         for (Food food : repository.getAllFoods()) {
             System.out.println(food.getName());
         }
